@@ -128,8 +128,8 @@ its import); keep the shared body generic.
 ## Related
 
 - [Orchestrating Claude Code and Codex](orchestrating-claude-and-codex.md)
-- [New-Project Bootstrap (`/new-project`)](../agents/claude/new-project-bootstrap.md)
-  — scaffolds this exact `AGENTS.md` + `CLAUDE.md` pair for a new project.
+- [Scaffolding New Projects](scaffolding-new-projects.md) — the `new-project` /
+  `new-git-project` skills scaffold this exact `AGENTS.md` + `CLAUDE.md` pair.
 
 ## Sources
 

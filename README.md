@@ -24,10 +24,9 @@ than transcribed uncritically (see [Conventions](#conventions)).
 - **[`agents/`](agents/)** — docs specific to a single agent.
   - **[`agents/claude/`](agents/claude/)** — Claude / Claude Code techniques,
     setup, and tool evaluations.
-  - **[`agents/codex/`](agents/codex/)** — OpenAI Codex tooling (e.g. the
-    new-project Skill).
-- **[`shared/`](shared/)** — cross-cutting docs that apply to any agent
-  (e.g. orchestrating multiple agents, syncing instruction files).
+- **[`shared/`](shared/)** — cross-cutting docs (and cross-agent Skills) that
+  apply to any agent — orchestrating multiple agents, syncing instruction files,
+  scaffolding new projects.
 
 Each folder has its own `README.md` index. If a doc needs images, add them in an
 `images/` subfolder beside it. If a topic starts agent-specific and later proves
@@ -44,7 +43,8 @@ cross-cutting, it moves into `shared/` and the links are updated.
 - **Share instructions across agents** →
   [Keeping CLAUDE.md and AGENTS.md in Sync](shared/syncing-claude-md-and-agents-md.md)
 - **Set up a new project** →
-  [New-Project Bootstrap (`/new-project`)](agents/claude/new-project-bootstrap.md)
+  [Scaffolding New Projects](shared/scaffolding-new-projects.md)
+  (`new-project` / `new-git-project` skills)
 
 Full lists live in the [Claude index](agents/claude/README.md) and the
 [shared index](shared/README.md).
