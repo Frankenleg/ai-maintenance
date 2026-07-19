@@ -10,8 +10,13 @@ detailed instructions for specific workflows (e.g. PR reviews or database
 migrations), those tokens are present **even when you're doing unrelated
 work** — pure overhead most of the time.
 
-**Skills load on-demand**, only when invoked. Moving specialized instructions
-into skills keeps your base context smaller.
+A skill's **description** loads at session start (so Claude knows the skill
+exists and when to invoke it); its **full instructions/body** load on-demand
+only when invoked. Moving specialized instructions into a skill therefore keeps
+your base context smaller — the bulky body is deferred.
+
+> **Caveat:** it isn't free. Each skill's description *does* stay in base
+> context at startup, so keep descriptions tight — only the body is deferred.
 
 ## Rule of thumb
 
