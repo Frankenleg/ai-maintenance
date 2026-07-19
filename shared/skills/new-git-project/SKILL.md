@@ -11,8 +11,14 @@ Set up a new project as a git repository with agent instruction files, using the
 
 ## Steps
 
-1. **Determine the project name and a one-line description.** If the user hasn't
-   provided them in the conversation, ask before writing anything.
+1. **Determine the project name and a one-line description.**
+   - If the user provided them (in the conversation or as arguments), use those.
+   - Otherwise, if you can ask the user, ask before writing anything.
+   - If you cannot ask (running autonomously / auto-invoked), do **not** invent a
+     name like "Test". Default the **name** to the current directory's name,
+     leave the **description** as a literal placeholder
+     (`<one-line description — fill in>`), and in your final report state both
+     assumptions clearly so the user can correct them.
 
 2. **Don't clobber.** If `AGENTS.md` or `CLAUDE.md` already exists in the project
    root, do NOT overwrite it — show what's there and ask how to proceed.

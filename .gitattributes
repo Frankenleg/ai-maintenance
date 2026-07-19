@@ -1,3 +1,7 @@
 # Git hooks and shell scripts must keep LF endings so they run on all platforms.
 .githooks/pre-commit text eol=lf
 *.sh text eol=lf
+
+# Normalize markdown (incl. SKILL.md) to LF — consistent endings in this public
+# repo and no "LF will be replaced by CRLF" warnings on Windows checkouts.
+*.md text eol=lf
