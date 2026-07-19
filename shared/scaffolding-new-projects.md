@@ -37,11 +37,22 @@ not the location):
 
 - **Claude Code:** `~/.claude/skills/<name>/SKILL.md`
 - **Codex:** `~/.agents/skills/<name>/SKILL.md`
-  (Windows: `C:\Users\<you>\.agents\skills\`; `~/.codex/skills/` is reserved for
-  Codex's system skills — don't author there.)
+
+`~` is your home directory on any OS — `/home/<you>` (Linux), `/Users/<you>`
+(macOS), `C:\Users\<you>` (Windows) — so the same skill folders install
+identically everywhere. Note `~/.codex/skills/` is reserved for Codex's system
+skills — don't author there.
 
 Copy both `skills/new-project/` and `skills/new-git-project/` into each location.
 The repo copy here is the source of truth; re-copy after edits.
+
+## Cross-platform
+
+The skills are OS-agnostic: they're instructions the agent follows, so the agent
+adapts to whatever OS it runs on. The `new-git-project` `.gitattributes`
+(`* text=auto`) is the cross-platform piece — it normalizes line endings so a
+repo created on one OS behaves correctly when cloned on another (e.g. Windows ↔
+Linux).
 
 ## Usage
 
