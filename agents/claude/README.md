@@ -19,6 +19,8 @@ Docs for maintaining Claude / Claude Code.
 - [Leverage Subagents and Skills with Reduced Models](reduced-models-for-subagents-and-skills.md)
   — assign `model: haiku` to grunt work and `context: fork` to self-contained
   skills; keep the frontier model for judgment.
+- [Move Workflows into Script-Driven Skills](script-driven-skills.md) — bundle
+  scripts in skills and run deterministic steps as code instead of token-by-token.
 
 ## Tool evaluations
 
