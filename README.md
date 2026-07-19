@@ -24,9 +24,10 @@ than transcribed uncritically (see [Conventions](#conventions)).
 - **[`agents/`](agents/)** — docs specific to a single agent.
   - **[`agents/claude/`](agents/claude/)** — Claude / Claude Code techniques,
     setup, and tool evaluations.
-- **[`shared/`](shared/)** — cross-cutting docs (and cross-agent Skills) that
-  apply to any agent — orchestrating multiple agents, syncing instruction files,
-  scaffolding new projects.
+- **[`shared/`](shared/)** — cross-cutting docs that apply to any agent —
+  orchestrating multiple agents, syncing instruction files, scaffolding new
+  projects. (The scaffolding *Skills* themselves live in
+  [`ai-skills`](https://github.com/Frankenleg/ai-skills); see below.)
 
 Each folder has its own `README.md` index. If a doc needs images, add them in an
 `images/` subfolder beside it. If a topic starts agent-specific and later proves
@@ -34,10 +35,11 @@ cross-cutting, it moves into `shared/` and the links are updated.
 
 ## Related repositories
 
-- **[`ai-skills`](https://github.com/Frankenleg/ai-skills)** — the canonical home
+- **[`ai-skills`](https://github.com/Frankenleg/ai-skills)** — the source of truth
   for the cross-agent scaffolding Skills (`new-project`, `new-git-project`),
-  built as script-driven Python skills with tests. This repo documents and links
-  to them; `ai-skills` owns the code.
+  built as script-driven Python skills (bundled `scaffold.py` + tests, with an
+  `install.py`). This repo documents and links to them; `ai-skills` owns the code.
+  See [Scaffolding New Projects](shared/scaffolding-new-projects.md).
 
 ## Start here
 

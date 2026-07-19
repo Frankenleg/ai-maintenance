@@ -24,6 +24,15 @@ guidance.
 > model's flexibility trades reliability for rigidity and makes the skill
 > brittle. Only migrate steps that are genuinely deterministic.
 
+## A worked example
+
+[`ai-skills`](https://github.com/Frankenleg/ai-skills) applies this shape to the
+`new-project` / `new-git-project` scaffolders: each `SKILL.md` orchestrates and
+collects the project name/description, while a bundled `scaffold.py` does the
+deterministic file-writing and git init — tested with `pytest`, so the mechanical
+core can't drift between runs or between Claude and Codex. See
+[Scaffolding New Projects](../../shared/scaffolding-new-projects.md).
+
 ## Migration audit prompt
 
 Get recommendations without changing anything (source: @austin.marchese;

@@ -11,15 +11,9 @@ Cross-cutting docs that apply to any AI agent, not just one.
   — one source of truth for multi-agent repos: make `AGENTS.md` canonical and
   import it from `CLAUDE.md` with `@AGENTS.md`.
 - [Scaffolding New Projects](scaffolding-new-projects.md) — cross-agent
-  `new-project` / `new-git-project` Skills (installed to both `~/.claude/skills/`
-  and `~/.agents/skills/`).
-
-## Skills
-
-- [`skills/new-project/`](skills/new-project/SKILL.md) — scaffold instruction
-  files, no git.
-- [`skills/new-git-project/`](skills/new-git-project/SKILL.md) — scaffold as a
-  git repo (init + `.gitignore` + initial commit).
+  `new-project` / `new-git-project` Skills (source of truth:
+  [`ai-skills`](https://github.com/Frankenleg/ai-skills); installed to both
+  `~/.claude/skills/` and `~/.agents/skills/`).
 
 ---
 
