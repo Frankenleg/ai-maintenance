@@ -21,6 +21,11 @@ Code (via `CLAUDE.md`'s `@AGENTS.md` import) and Codex.
 - **Verify before documenting.** Don't transcribe claims uncritically — check
   them (Claude Code features, tool claims) and push back on anything that's
   inaccurate, outdated, or overstated. Frame heuristics as heuristics.
+- **Link to official docs; don't replicate them.** A copy of upstream docs rots
+  silently and adds bulk without value. Capture only the *delta* — the verified
+  fact you rely on plus what the docs don't give you (a caveat, a decision, the
+  "what actually happens", a recommendation) — and cite/link the source. If a
+  doc would just restate official docs with nothing added, drop a link instead.
 - **Images sparingly.** Capture information as text; save an image only when it
   genuinely supports the doc.
 - **Keep indexes updated.** Update the relevant `README.md` when adding a doc.
