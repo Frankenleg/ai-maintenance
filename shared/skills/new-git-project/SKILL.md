@@ -1,6 +1,6 @@
 ---
 name: new-git-project
-description: Scaffold a new project AS A GIT REPOSITORY — git init, a minimal .gitignore, a light canonical AGENTS.md plus a CLAUDE.md that imports it, and an initial commit on main. Use when starting a new project/repo that should be version-controlled, or to add git to a project already scaffolded by new-project. Does NOT create a remote. Use new-project instead if you do NOT want git.
+description: Scaffold a new project AS A GIT REPOSITORY — git init, a minimal .gitignore and .gitattributes, a light canonical AGENTS.md plus a CLAUDE.md that imports it, and an initial commit on main. Use when starting a new project/repo that should be version-controlled, or to add git to a project already scaffolded by new-project. Does NOT create a remote. Use new-project instead if you do NOT want git.
 model: haiku
 ---
 
@@ -43,7 +43,19 @@ idempotent** — safe to run on an empty directory, or right after `new-project`
    id_rsa
    ```
 
-4. **Create the instruction files that are missing.** For `AGENTS.md` and
+4. **Create a `.gitattributes` only if one doesn't already exist** (keep any
+   existing one). This normalizes line endings — no "LF will be replaced by
+   CRLF" warnings on Windows, and consistent endings across platforms:
+
+   ```gitattributes
+   # Normalize line endings: store LF in the repo, check out native per-OS.
+   * text=auto
+
+   # Shell scripts must stay LF so they run on all platforms.
+   *.sh text eol=lf
+   ```
+
+5. **Create the instruction files that are missing.** For `AGENTS.md` and
    `CLAUDE.md`: **keep any that already exist** (do not overwrite — running this
    right after `new-project` is expected), and create only the missing one(s).
 
@@ -81,14 +93,14 @@ idempotent** — safe to run on an empty directory, or right after `new-project`
         Claude-only instructions below the import if ever needed. -->
    ```
 
-5. **Make the initial commit only if the repo has no commits yet.** If this is a
+6. **Make the initial commit only if the repo has no commits yet.** If this is a
    fresh repo (no `HEAD`/commits), stage the files and commit as
    `Initial project scaffold` on `main` — this baseline commit is expected. If
    the repo **already has commit history**, do NOT add a commit; leave staging to
    the user's normal workflow.
 
-6. **Do NOT create a remote.** Creating/pushing to a remote is a separate,
+7. **Do NOT create a remote.** Creating/pushing to a remote is a separate,
    deliberate step for the user.
 
-7. **Report** what you did — git initialized or already present, which files were
+8. **Report** what you did — git initialized or already present, which files were
    created vs. found existing, and whether an initial commit was made.

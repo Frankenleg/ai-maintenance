@@ -7,7 +7,7 @@ Two **Skills** that scaffold a new project's instruction files in the
 | Skill | What it does |
 | --- | --- |
 | **`new-project`** | Creates a light `AGENTS.md` + a `CLAUDE.md` that imports it. **No git.** |
-| **`new-git-project`** | `git init` (main) + minimal `.gitignore` + the same `AGENTS.md`/`CLAUDE.md` + an **initial commit**. No remote. |
+| **`new-git-project`** | `git init` (main) + minimal `.gitignore` + `.gitattributes` (line-ending normalization) + the same `AGENTS.md`/`CLAUDE.md` + an **initial commit**. No remote. |
 
 Canonical copies live in [`skills/`](skills/) — install them into each agent's
 skill directory (below).
