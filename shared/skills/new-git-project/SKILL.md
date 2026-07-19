@@ -44,8 +44,10 @@ idempotent** — safe to run on an empty directory, or right after `new-project`
    ```
 
 4. **Create a `.gitattributes` only if one doesn't already exist** (keep any
-   existing one). This normalizes line endings — no "LF will be replaced by
-   CRLF" warnings on Windows, and consistent endings across platforms:
+   existing one). This normalizes line endings for consistency across platforms
+   (LF stored in the repo). On Windows, git may still print harmless
+   "LF will be replaced by CRLF" messages while staging — they don't change the
+   committed content:
 
    ```gitattributes
    # Normalize line endings: store LF in the repo, check out native per-OS.
@@ -94,10 +96,12 @@ idempotent** — safe to run on an empty directory, or right after `new-project`
    ```
 
 6. **Make the initial commit only if the repo has no commits yet.** If this is a
-   fresh repo (no `HEAD`/commits), stage the files and commit as
-   `Initial project scaffold` on `main` — this baseline commit is expected. If
-   the repo **already has commit history**, do NOT add a commit; leave staging to
-   the user's normal workflow.
+   fresh repo (no `HEAD`/commits), stage **all non-ignored files in the project**
+   with `git add --all` — this includes any files already present, not only the
+   scaffold files (ignored files stay out via `.gitignore`) — then commit as
+   `Initial project scaffold` on `main`. This baseline commit is expected. If the
+   repo **already has commit history**, do NOT add a commit; leave staging to the
+   user's normal workflow.
 
 7. **Do NOT create a remote.** Creating/pushing to a remote is a separate,
    deliberate step for the user.
