@@ -8,7 +8,8 @@ Code (via `CLAUDE.md`'s `@AGENTS.md` import) and Codex.
 
 - `agents/<name>/` — docs specific to one agent (e.g. `agents/claude/`).
 - `shared/` — cross-cutting docs that apply to any agent.
-- Each folder has a `README.md` index; images live in its `images/` subfolder.
+- Each folder has a `README.md` index; if a doc needs images, add them in an
+  `images/` subfolder beside it.
 - See `README.md` for the full map.
 
 ## Conventions when adding docs

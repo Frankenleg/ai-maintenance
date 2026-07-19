@@ -41,4 +41,4 @@ Docs for maintaining Claude / Claude Code.
 
 ---
 
-Images for these docs live in [`images/`](images/).
+If a doc here needs images, add them in an `images/` subfolder beside it.

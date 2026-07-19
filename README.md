@@ -27,8 +27,8 @@ than transcribed uncritically (see [Conventions](#conventions)).
 - **[`shared/`](shared/)** — cross-cutting docs that apply to any agent
   (e.g. orchestrating multiple agents, syncing instruction files).
 
-Each folder has its own `README.md` index. Images live in an `images/` subfolder
-next to the docs that use them. If a topic starts agent-specific and later proves
+Each folder has its own `README.md` index. If a doc needs images, add them in an
+`images/` subfolder beside it. If a topic starts agent-specific and later proves
 cross-cutting, it moves into `shared/` and the links are updated.
 
 ## Start here

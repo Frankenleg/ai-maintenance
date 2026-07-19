@@ -1,6 +1,7 @@
 # Be Concise With Responses
 
-A simple instruction to reduce **output** tokens: tell Claude to be concise.
+An instruction to reduce **output** tokens — concise by default, without
+dropping the detail that matters for correctness.
 
 > Note: this targets **output** tokens (what Claude writes back), a different
 > lever than trimming session-start **input** context (see
