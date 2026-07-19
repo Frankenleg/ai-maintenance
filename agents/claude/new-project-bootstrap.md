@@ -23,6 +23,10 @@ small custom slash command is the idiomatic, Windows-safe fit.
 
 It refuses to overwrite existing `AGENTS.md`/`CLAUDE.md`.
 
+Runs on `model: haiku` — scaffolding is mostly deterministic grunt work, so it
+doesn't need the frontier model (see
+[Reduced Models for Subagents & Skills](reduced-models-for-subagents-and-skills.md)).
+
 ## Install / location
 
 The live command lives globally at `~/.claude/commands/new-project.md`
