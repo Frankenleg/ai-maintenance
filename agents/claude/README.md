@@ -21,6 +21,9 @@ Docs for maintaining Claude / Claude Code.
 
 - [Caveman](caveman-plugin-evaluation.md) — **evaluated, not adopted.** Real and
   safe, but ~8–10% real savings (not the advertised 65%); a novelty.
+- [rtk ("rtk AI")](rtk-cli-proxy-evaluation.md) — **evaluated, not adopted.**
+  Real, but ~single-digit real savings (not 60–90%) and an open critical
+  shell-injection report; not a proxy for LLM traffic.
 
 ---
 
