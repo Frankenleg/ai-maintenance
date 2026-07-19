@@ -16,6 +16,9 @@ Docs for maintaining Claude / Claude Code.
   result.
 - [Be Concise With Responses](be-concise-responses.md) — reduce output tokens
   with a measured conciseness instruction (thorough when correctness matters).
+- [Leverage Subagents and Skills with Reduced Models](reduced-models-for-subagents-and-skills.md)
+  — assign `model: haiku` to grunt work and `context: fork` to self-contained
+  skills; keep the frontier model for judgment.
 
 ## Tool evaluations
 
