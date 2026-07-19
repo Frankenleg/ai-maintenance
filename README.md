@@ -32,6 +32,13 @@ Each folder has its own `README.md` index. If a doc needs images, add them in an
 `images/` subfolder beside it. If a topic starts agent-specific and later proves
 cross-cutting, it moves into `shared/` and the links are updated.
 
+## Related repositories
+
+- **[`ai-skills`](https://github.com/Frankenleg/ai-skills)** — the canonical home
+  for the cross-agent scaffolding Skills (`new-project`, `new-git-project`),
+  built as script-driven Python skills with tests. This repo documents and links
+  to them; `ai-skills` owns the code.
+
 ## Start here
 
 - **Trim what loads every session** →

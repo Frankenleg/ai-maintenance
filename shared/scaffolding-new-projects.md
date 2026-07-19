@@ -4,6 +4,13 @@ Two **Skills** that scaffold a new project's instruction files in the
 `AGENTS.md`-canonical + `CLAUDE.md`-import pattern — one behavior spec, used by
 **both** Claude Code and Codex.
 
+> **Canonical home: [`ai-skills`](https://github.com/Frankenleg/ai-skills).**
+> These skills are being relocated to their own public repo, where they become
+> **script-driven** (Python) with tests. The copies in [`skills/`](skills/) here
+> are the current prose versions, pending that migration (see the `ai-skills`
+> design spec). Once migrated, install from `ai-skills` and this doc points
+> there.
+
 | Skill | What it does |
 | --- | --- |
 | **`new-project`** | Creates a light `AGENTS.md` + a `CLAUDE.md` that imports it. **No git.** |
