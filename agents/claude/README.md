@@ -22,12 +22,6 @@ Docs for maintaining Claude / Claude Code.
 - [Move Workflows into Script-Driven Skills](script-driven-skills.md) — bundle
   scripts in skills and run deterministic steps as code instead of token-by-token.
 
-### Setup & scaffolding
-
-- [New-Project Bootstrap (`/new-project`)](new-project-bootstrap.md) — custom
-  slash command that scaffolds `AGENTS.md` (light) + `CLAUDE.md` (`@AGENTS.md`)
-  for a new project.
-
 ### Sessions & history
 
 - [Session Cleanup & Retention](session-cleanup-and-retention.md) — how sessions
@@ -44,6 +38,11 @@ Docs for maintaining Claude / Claude Code.
 - [Superpowers](superpowers-plugin-evaluation.md) — **recommended (situational),
   in active use.** Reputable, safe, MIT; workflow discipline worth it for
   substantial work, bypassable for trivial edits.
+
+## See also
+
+- [Scaffolding New Projects](../../shared/scaffolding-new-projects.md) — the
+  cross-agent `new-project` / `new-git-project` skills (shared with Codex).
 
 ---
 

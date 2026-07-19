@@ -1,13 +1,15 @@
 ---
 name: new-project
-description: Scaffold a new project's agent instruction files — a light canonical AGENTS.md plus a CLAUDE.md that imports it. Use when starting a new or empty project/repo that has no AGENTS.md or CLAUDE.md yet. Do not use to edit an existing, already-scaffolded instruction set.
+description: Scaffold a new project's agent instruction files — a light canonical AGENTS.md plus a CLAUDE.md that imports it. Use when starting a new or empty project/repo that needs baseline agent guidance and you do NOT want a git repository created. Use new-git-project instead if you also want git initialized. Do not use to edit an existing, already-scaffolded instruction set.
+model: haiku
 ---
 
-# New Project Scaffolder
+# New Project Scaffolder (no git)
 
 Set up a new project's agent instruction files using the "AGENTS.md canonical,
 CLAUDE.md imports it" pattern, so Codex and Claude Code share one source of
-truth.
+truth. **Do not initialize git** — this creates instruction files only. (Use the
+`new-git-project` skill if you also want a git repository.)
 
 ## Steps
 
@@ -52,4 +54,6 @@ truth.
         Claude-only instructions below the import if ever needed. -->
    ```
 
-5. **Report** the files created. Create nothing else.
+5. **Do not run any git commands.**
+
+6. **Report** the files created. Create nothing else.
