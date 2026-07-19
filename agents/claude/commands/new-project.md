@@ -1,6 +1,7 @@
 ---
 description: Scaffold a new project's agent instructions (AGENTS.md canonical + CLAUDE.md import)
 argument-hint: [optional one-line project description]
+model: haiku
 ---
 
 Set up this project's agent instruction files using the "AGENTS.md canonical,
