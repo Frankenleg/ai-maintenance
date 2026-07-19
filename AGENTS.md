@@ -4,6 +4,24 @@ Documentation repo for managing and maintaining AI coding agents. These
 instructions apply to any agent doing work in this repo. Shared with Claude
 Code (via `CLAUDE.md`'s `@AGENTS.md` import) and Codex.
 
+## Public repository — keep it clean
+
+**This repo is public.** Never commit proprietary, personal, or sensitive
+information:
+
+- **No secrets** — keys, tokens, passwords, `.env` files, auth material.
+- **No personal identifiers** — real usernames, emails, internal
+  domains/hostnames, IP addresses, or homelab/infrastructure specifics.
+- **No employer/client proprietary content.**
+- **Use placeholders in examples** — `<you>`, `~/.claude/…`, `example.com` —
+  not real paths, names, or hosts.
+- **Scrub transcribed screenshots/prompts** — remove any sensitive value before
+  filing it.
+
+When in doubt, leave it out. Before committing, scan the staged changes for the
+above. Remember Git history is public too — a secret committed and "removed"
+later is still exposed.
+
 ## Repository layout
 
 - `agents/<name>/` — docs specific to one agent (e.g. `agents/claude/`).
