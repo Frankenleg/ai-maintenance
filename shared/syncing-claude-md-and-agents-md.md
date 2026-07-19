@@ -65,12 +65,61 @@ Anything that should apply ONLY to Claude Code goes here.
   beside it.
 - Imports go up to **4 hops** deep.
 
+## Global (user-level) instructions across agents
+
+The setup above is for **per-project** files. Global/user-level sync is a
+separate problem because each tool keeps its global file in its own home and
+**Codex's global file has no import mechanism**:
+
+- **Claude Code global:** `~/.claude/CLAUDE.md` — supports `@import`
+  (absolute paths).
+- **Codex global:** `C:\Users\<you>\.codex\AGENTS.md` — read natively and
+  merged root-to-leaf, but **no import/include** (open issues #6038, #17401).
+  Blogs claiming `@file` imports work in Codex are wrong (that's Claude
+  Code / Gemini).
+
+### Recommended: `~/.codex/AGENTS.md` is canonical; Claude imports it
+
+Codex requires its global instructions at `~/.codex/AGENTS.md` and can't
+import, so make **that file the single source of truth**. In
+`~/.claude/CLAUDE.md`:
+
+```markdown
+@C:\Users\<you>\.codex\AGENTS.md
+
+## Claude-only global instructions
+(anything that should apply to Claude Code but not Codex)
+```
+
+- **No symlink/hardlink, no admin, no copy step** — one real file, edited once,
+  both agents read it. (A hardlink to a canonical file elsewhere also works
+  — `mklink /H`, same NTFS volume, no admin — but editors that save via
+  atomic-replace can sever the link, so the direct import is cleaner.)
+- Avoid Codex's `config.toml` `model_instructions_file` for this — its
+  semantics are ambiguous (it may *replace* Codex's base prompt).
+
+### Handling per-agent differences (e.g. branch prefix)
+
+Both agents read the same bytes, so write shared instructions **generically and
+let each agent self-select** rather than branching the file:
+
+> Branch off `main` into a branch prefixed with **your agent name** —
+> `claude/<short-name>` if you are Claude Code, `codex/<short-name>` if you are
+> Codex. Never commit directly to `main`.
+
+Genuinely agent-only lines go in each tool's native wrapper (`CLAUDE.md` below
+its import); keep the shared body generic.
+
+### Scope
+
+- Syncs **instructions**, not **settings**. Codex settings (model, approval,
+  sandbox, MCP) live in `~/.codex/config.toml` — the analog of Claude's
+  `settings.json`; different format, not syncable this way.
+
 ## Scope notes
 
-- This is for **per-project** files. Your **global** `~/.claude/CLAUDE.md` stays
-  Claude-specific — Codex has its own global config.
-- Since `AGENTS.md` now feeds both tools, the "keep it concise / a directory,
-  not documentation" hygiene applies to it too
+- Since `AGENTS.md` (project or global) now feeds both tools, the "keep it
+  concise / a directory, not documentation" hygiene applies to it too
   (see [Clean Up Session-Start Context](../agents/claude/clean-up-session-start-context.md)
   and [Move Instructions from CLAUDE.md to Skills](../agents/claude/move-instructions-to-skills.md)).
 
