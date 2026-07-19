@@ -4,7 +4,8 @@ Docs for maintaining Claude / Claude Code.
 
 ## Topics
 
-_(none yet — topics will be added as one doc per task)_
+- [Clean Up Session-Start Context](clean-up-session-start-context.md) — audit
+  MCPs, Skills, and CLAUDE.md that pre-load at session start, and trim them.
 
 ---
 
