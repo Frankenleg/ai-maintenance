@@ -22,6 +22,11 @@ When in doubt, leave it out. Before committing, scan the staged changes for the
 above. Remember Git history is public too — a secret committed and "removed"
 later is still exposed.
 
+A **gitleaks pre-commit hook** in [`.githooks/`](.githooks/pre-commit) scans
+staged changes and blocks the commit if it finds a secret. Enable it once per
+clone: `git config core.hooksPath .githooks` (requires
+[gitleaks](https://github.com/gitleaks/gitleaks) installed).
+
 ## Repository layout
 
 - `agents/<name>/` — docs specific to one agent (e.g. `agents/claude/`).
