@@ -24,6 +24,8 @@ than transcribed uncritically (see [Conventions](#conventions)).
 - **[`agents/`](agents/)** — docs specific to a single agent.
   - **[`agents/claude/`](agents/claude/)** — Claude / Claude Code techniques,
     setup, and tool evaluations.
+  - **[`agents/codex/`](agents/codex/)** — OpenAI Codex tooling (e.g. the
+    new-project Skill).
 - **[`shared/`](shared/)** — cross-cutting docs that apply to any agent
   (e.g. orchestrating multiple agents, syncing instruction files).
 
