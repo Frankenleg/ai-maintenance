@@ -29,6 +29,9 @@ Docs for maintaining Claude / Claude Code.
 - [rtk ("rtk AI")](rtk-cli-proxy-evaluation.md) — **evaluated, not adopted.**
   Real, but ~single-digit real savings (not 60–90%) and an open critical
   shell-injection report; not a proxy for LLM traffic.
+- [Superpowers](superpowers-plugin-evaluation.md) — **recommended (situational),
+  in active use.** Reputable, safe, MIT; workflow discipline worth it for
+  substantial work, bypassable for trivial edits.
 
 ---
 
