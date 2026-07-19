@@ -1,13 +1,15 @@
 ---
 name: new-git-project
-description: Scaffold a new project AS A GIT REPOSITORY — git init, a minimal .gitignore, a light canonical AGENTS.md plus a CLAUDE.md that imports it, and an initial commit on main. Use when starting a new project/repo that should be version-controlled. Does NOT create a remote. Use new-project instead if you do NOT want git.
+description: Scaffold a new project AS A GIT REPOSITORY — git init, a minimal .gitignore, a light canonical AGENTS.md plus a CLAUDE.md that imports it, and an initial commit on main. Use when starting a new project/repo that should be version-controlled, or to add git to a project already scaffolded by new-project. Does NOT create a remote. Use new-project instead if you do NOT want git.
 model: haiku
 ---
 
 # New Git Project Scaffolder
 
 Set up a new project as a git repository with agent instruction files, using the
-"AGENTS.md canonical, CLAUDE.md imports it" pattern.
+"AGENTS.md canonical, CLAUDE.md imports it" pattern. Every step is **additive and
+idempotent** — safe to run on an empty directory, or right after `new-project`
+(it just adds git), or again on an already-set-up project.
 
 ## Steps
 
@@ -20,13 +22,12 @@ Set up a new project as a git repository with agent instruction files, using the
      (`<one-line description — fill in>`), and in your final report state both
      assumptions clearly so the user can correct them.
 
-2. **Don't clobber.** If `AGENTS.md` or `CLAUDE.md` already exists in the project
-   root, do NOT overwrite it — show what's there and ask how to proceed.
+2. **Ensure git is initialized.** If the directory is **not** already a git repo,
+   run `git init` and ensure the default branch is `main`. If it already is a
+   repo, leave it as-is.
 
-3. **Initialize git** if the directory is not already a git repo: run `git init`
-   and ensure the default branch is `main`.
-
-4. **Create a minimal `.gitignore`** (only if one doesn't already exist):
+3. **Create a minimal `.gitignore` only if one doesn't already exist** (keep any
+   existing one):
 
    ```gitignore
    # OS / editor cruft
@@ -42,10 +43,13 @@ Set up a new project as a git repository with agent instruction files, using the
    id_rsa
    ```
 
-5. **Create `AGENTS.md`** as a LIGHT, project-specific skeleton. Fill in what you
-   can infer from the repo (name, stack, build/test/run commands); leave clear
-   `<placeholders>` for the rest. Do NOT copy global rules (git workflow, etc.) —
-   those come from global config. Keep it well under the ~200-line target. Shape:
+4. **Create the instruction files that are missing.** For `AGENTS.md` and
+   `CLAUDE.md`: **keep any that already exist** (do not overwrite — running this
+   right after `new-project` is expected), and create only the missing one(s).
+
+   `AGENTS.md` is a LIGHT, project-specific skeleton — infer what you can (name,
+   stack, build/test/run commands), leave clear `<placeholders>` for the rest,
+   don't copy global rules, keep it under the ~200-line target:
 
    ```markdown
    # <Project Name>
@@ -67,7 +71,7 @@ Set up a new project as a git repository with agent instruction files, using the
    - <anything non-obvious about this project>
    ```
 
-6. **Create `CLAUDE.md`** containing exactly:
+   `CLAUDE.md` is exactly:
 
    ```markdown
    @AGENTS.md
@@ -77,11 +81,14 @@ Set up a new project as a git repository with agent instruction files, using the
         Claude-only instructions below the import if ever needed. -->
    ```
 
-7. **Make the initial commit** on `main`: stage the new files and commit with a
-   message like `Initial project scaffold`. This baseline commit on `main` is
-   expected — the "never commit directly to main" rule is for later feature work.
+5. **Make the initial commit only if the repo has no commits yet.** If this is a
+   fresh repo (no `HEAD`/commits), stage the files and commit as
+   `Initial project scaffold` on `main` — this baseline commit is expected. If
+   the repo **already has commit history**, do NOT add a commit; leave staging to
+   the user's normal workflow.
 
-8. **Do NOT create a remote.** Creating/pushing to a remote is a separate,
+6. **Do NOT create a remote.** Creating/pushing to a remote is a separate,
    deliberate step for the user.
 
-9. **Report** what was created and committed.
+7. **Report** what you did — git initialized or already present, which files were
+   created vs. found existing, and whether an initial commit was made.

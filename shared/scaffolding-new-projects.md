@@ -12,6 +12,10 @@ Two **Skills** that scaffold a new project's instruction files in the
 Canonical copies live in [`skills/`](skills/) — install them into each agent's
 skill directory (below).
 
+`new-git-project` is **additive and idempotent**: it creates only what's missing
+and only commits a fresh repo — so you can run it right after `new-project` to
+*add git* to an already-scaffolded project, or re-run it harmlessly.
+
 ## Why Skills, and why two of them
 
 - **Cross-agent, one spec.** A single `SKILL.md` (open [Agent Skills](https://agentskills.io)
