@@ -22,6 +22,12 @@ Docs for maintaining Claude / Claude Code.
 - [Move Workflows into Script-Driven Skills](script-driven-skills.md) — bundle
   scripts in skills and run deterministic steps as code instead of token-by-token.
 
+### Setup & scaffolding
+
+- [New-Project Bootstrap (`/new-project`)](new-project-bootstrap.md) — custom
+  slash command that scaffolds `AGENTS.md` (light) + `CLAUDE.md` (`@AGENTS.md`)
+  for a new project.
+
 ## Tool evaluations
 
 - [Caveman](caveman-plugin-evaluation.md) — **evaluated, not adopted.** Real and
