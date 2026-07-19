@@ -28,5 +28,7 @@ Code (via `CLAUDE.md`'s `@AGENTS.md` import) and Codex.
 
 ## Conciseness
 
-Keep instruction files (this one, `CLAUDE.md`) and the docs concise — a
-directory, not documentation.
+Keep the instruction set concise — a directory, not documentation. Because
+`CLAUDE.md` just imports this file, `AGENTS.md` is the content that matters;
+measure its length here. Aim for **under ~200 lines as a target, not a hard
+requirement** — a smell threshold for "trim this," not a gate.
