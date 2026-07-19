@@ -28,6 +28,12 @@ Docs for maintaining Claude / Claude Code.
   slash command that scaffolds `AGENTS.md` (light) + `CLAUDE.md` (`@AGENTS.md`)
   for a new project.
 
+### Sessions & history
+
+- [Session Cleanup & Retention](session-cleanup-and-retention.md) — how sessions
+  auto-prune (`cleanupPeriodDays`, default 30), what survives cleanup, bulk
+  `claude project purge`, and `/export` to keep one past the window.
+
 ## Tool evaluations
 
 - [Caveman](caveman-plugin-evaluation.md) — **evaluated, not adopted.** Real and
