@@ -23,6 +23,13 @@ Code (via `CLAUDE.md`'s `@AGENTS.md` import) and Codex.
 - **Images sparingly.** Capture information as text; save an image only when it
   genuinely supports the doc.
 - **Keep indexes updated.** Update the relevant `README.md` when adding a doc.
+- **Copy-paste items go in fenced code blocks** — anything meant to be pasted
+  verbatim (prompts, rules for CLAUDE.md/AGENTS.md, commands, snippets) uses a
+  code block, not a blockquote. Reserve blockquotes for quotes, notes, and
+  caveats.
+- **Keep it relational.** Every topic doc has a `## Related` section linking its
+  siblings; every doc is reachable from a `README.md` index; use relative links
+  so navigation works from the repo or GitHub.
 - **Tool evaluations** go under `agents/<name>/` with a clear verdict
   (adopted / recommended-situational / not adopted) and sources.
 

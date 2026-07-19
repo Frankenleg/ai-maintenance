@@ -29,9 +29,11 @@ guidance.
 Get recommendations without changing anything (source: @austin.marchese;
 lightly cleaned up):
 
-> Analyze my project and identify steps in my existing skills that can be
-> programmatic scripts. Share those skills as well as how you'd migrate them to
-> script-optimized skills.
+```text
+Analyze my project and identify steps in my existing skills that can be
+programmatic scripts. Share those skills as well as how you'd migrate them to
+script-optimized skills.
+```
 
 Review the proposed migrations, then apply the ones that are truly
 deterministic.
@@ -41,8 +43,10 @@ deterministic.
 A separate but related maintenance technique bundled into the same prompt —
 skill *discovery* rather than skill *optimization*:
 
-> Review my entire conversation history to identify any additional skills I
-> should create.
+```text
+Review my entire conversation history to identify any additional skills I
+should create.
+```
 
 Useful for spotting repeated workflows that deserve to become a skill in the
 first place.

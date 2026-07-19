@@ -103,9 +103,11 @@ import, so make **that file the single source of truth**. In
 Both agents read the same bytes, so write shared instructions **generically and
 let each agent self-select** rather than branching the file:
 
-> Branch off `main` into a branch prefixed with **your agent name** —
-> `claude/<short-name>` if you are Claude Code, `codex/<short-name>` if you are
-> Codex. Never commit directly to `main`.
+```text
+Branch off main into a branch prefixed with your agent name — claude/<short-name>
+if you are Claude Code, codex/<short-name> if you are Codex. Never commit
+directly to main.
+```
 
 Genuinely agent-only lines go in each tool's native wrapper (`CLAUDE.md` below
 its import); keep the shared body generic.
@@ -126,6 +128,8 @@ its import); keep the shared body generic.
 ## Related
 
 - [Orchestrating Claude Code and Codex](orchestrating-claude-and-codex.md)
+- [New-Project Bootstrap (`/new-project`)](../agents/claude/new-project-bootstrap.md)
+  — scaffolds this exact `AGENTS.md` + `CLAUDE.md` pair for a new project.
 
 ## Sources
 

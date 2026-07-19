@@ -36,6 +36,9 @@ is a candidate to move into a skill.
 
 - [Clean Up Session-Start Context](clean-up-session-start-context.md) — the
   audit routine that surfaces what's bloating CLAUDE.md, Skills, and MCPs.
+- [Offload Processing to Hooks and Skills](offload-processing-to-hooks-and-skills.md)
+- [Move Workflows into Script-Driven Skills](script-driven-skills.md)
+- [Leverage Subagents and Skills with Reduced Models](reduced-models-for-subagents-and-skills.md)
 
 > **Cross-project note:** "keep CLAUDE.md concise / under ~200 lines" is a
 > universal practice (candidate for global `~/.claude/CLAUDE.md`), currently

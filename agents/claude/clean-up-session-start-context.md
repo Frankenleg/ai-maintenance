@@ -10,16 +10,18 @@ Source: prompt shared by @austin.marchese.
 
 Paste this to Claude to run the full audit:
 
-> Audit everything that pre-loads into my context at the start of a session and
-> help me cut it down. Three parts:
->
-> 1. **MCPs:** list every connected MCP server and flag the ones I haven't
->    used. Recommend which to remove.
-> 2. **Skills:** list my skills and their descriptions. Flag unused ones to
->    delete, and shorten any description longer than it needs to be.
-> 3. **CLAUDE.md:** review it as a directory, not documentation. Trim it toward
->    under 200 lines without losing how the system works. Show me the list with
->    your recommendations before removing or editing anything.
+```text
+Audit everything that pre-loads into my context at the start of a session and
+help me cut it down. Three parts:
+
+1. MCPs: list every connected MCP server and flag the ones I haven't used.
+   Recommend which to remove.
+2. Skills: list my skills and their descriptions. Flag unused ones to delete,
+   and shorten any description longer than it needs to be.
+3. CLAUDE.md: review it as a directory, not documentation. Trim it toward under
+   200 lines without losing how the system works. Show me the list with your
+   recommendations before removing or editing anything.
+```
 
 ## What each part does
 
@@ -46,3 +48,11 @@ losing how the system works.
 Always have Claude **show the list with its recommendations *before* removing or
 editing anything.** Review, then approve — don't let the cleanup delete or
 rewrite unprompted.
+
+## Related
+
+- [Move Instructions from CLAUDE.md to Skills](move-instructions-to-skills.md) —
+  fix a bloated CLAUDE.md surfaced by part 3 of the audit.
+- [Offload Processing to Hooks and Skills](offload-processing-to-hooks-and-skills.md)
+- [Leverage Subagents and Skills with Reduced Models](reduced-models-for-subagents-and-skills.md)
+- [Be Concise With Responses](be-concise-responses.md)

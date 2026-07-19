@@ -64,13 +64,15 @@ model: haiku
 Run this to get recommendations without changing anything (source:
 @austin.marchese):
 
-> Find the Minimum Viable Model for every skill in `.claude/skills/` and
-> subagent in `.claude/agents/`.
->
-> - Grunt work (scrape, summarize, classify, fetch, format) → `model: haiku`.
-> - Judgment work (synthesize, decide, judge) → keep the top model.
->
-> Return a table: file → recommended change. Don't change anything yet.
+```text
+Find the Minimum Viable Model for every skill in .claude/skills/ and subagent
+in .claude/agents/.
+
+- Grunt work (scrape, summarize, classify, fetch, format) -> model: haiku.
+- Judgment work (synthesize, decide, judge) -> keep the top model.
+
+Return a table: file -> recommended change. Don't change anything yet.
+```
 
 The "return a table, don't change anything yet" pattern (same as the
 [session-start cleanup](clean-up-session-start-context.md) routine) keeps the
@@ -80,4 +82,8 @@ audit review-then-approve rather than acting unprompted.
 
 - [Offload Processing to Hooks and Skills](offload-processing-to-hooks-and-skills.md)
   — the sibling efficiency lever: preprocess in code so the model sees less.
+- [Move Workflows into Script-Driven Skills](script-driven-skills.md)
 - [Move Instructions from CLAUDE.md to Skills](move-instructions-to-skills.md)
+- [Orchestrating Claude Code and Codex](../../shared/orchestrating-claude-and-codex.md)
+  — the same "match the work to the cheapest capable executor" idea, across
+  vendors instead of models.

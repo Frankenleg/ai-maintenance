@@ -39,6 +39,13 @@ PR/review contexts — a real cost against a tiny token gain.
 - Prompt caching and scoping context are far larger levers if token cost is a
   genuine concern.
 
+## Related evaluations
+
+- [rtk](rtk-cli-proxy-evaluation.md) — the other token-reduction tool: also
+  oversold, plus a security concern.
+- [Superpowers](superpowers-plugin-evaluation.md) — a plugin that *did* clear
+  the bar.
+
 ## Sources
 
 - https://github.com/JuliusBrussee/caveman

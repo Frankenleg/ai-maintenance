@@ -31,9 +31,11 @@ synthesizing, reviewing, and driving the overall session.
 
 Source: @austin.marchese. Add to `CLAUDE.md` (project or global):
 
-> Hand any token-heavy execution task to Codex instead of running it here —
-> bulk file edits, well-specced builds, and bugs still failing after 2 tries.
-> Show me the diff before writing.
+```text
+Hand any token-heavy execution task to Codex instead of running it here — bulk
+file edits, well-specced builds, and bugs still failing after 2 tries. Show me
+the diff before writing.
+```
 
 The "show me the diff before writing" clause is the safety valve — review
 before anything is applied.
@@ -106,6 +108,8 @@ trust you've already extended to Codex.
 - [Leverage Subagents and Skills with Reduced Models](../agents/claude/reduced-models-for-subagents-and-skills.md)
   — the same "match the work to the cheapest capable executor" idea, across
   models instead of vendors.
+- [Keeping CLAUDE.md and AGENTS.md in Sync](syncing-claude-md-and-agents-md.md)
+  — share instructions across the two agents you're orchestrating.
 
 ## Sources
 

@@ -40,8 +40,13 @@ event-triggered step.
 
 ## Related
 
+- [Move Workflows into Script-Driven Skills](script-driven-skills.md) — the same
+  offload-to-code idea, applied inside a skill.
+- [Leverage Subagents and Skills with Reduced Models](reduced-models-for-subagents-and-skills.md)
 - [Move Instructions from CLAUDE.md to Skills](move-instructions-to-skills.md)
 - [Clean Up Session-Start Context](clean-up-session-start-context.md)
+- [Tool Evaluation: rtk](rtk-cli-proxy-evaluation.md) — a product that automates
+  this technique (and why the DIY version is usually enough).
 
 > **Cross-agent note:** the underlying principle (offload deterministic work to
 > code, feed the model only distilled output) is agent-agnostic. It's framed

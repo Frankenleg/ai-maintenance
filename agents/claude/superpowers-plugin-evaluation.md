@@ -73,6 +73,11 @@ It's **overridable by design**, so bypass it for the small stuff.
 
 Restart the client to activate.
 
+## Related evaluations
+
+- [Caveman](caveman-plugin-evaluation.md) — not adopted (oversold novelty).
+- [rtk](rtk-cli-proxy-evaluation.md) — not adopted (oversold + security concern).
+
 ## Sources
 
 - https://github.com/obra/superpowers

@@ -60,6 +60,13 @@ commands an LLM rewrote**:
 - [Offload Processing to Hooks and Skills](offload-processing-to-hooks-and-skills.md)
   — the same principle, DIY, no third-party shell-execution layer.
 
+## Related evaluations
+
+- [Caveman](caveman-plugin-evaluation.md) — the other token-reduction tool:
+  also oversold, but harmless.
+- [Superpowers](superpowers-plugin-evaluation.md) — a plugin that *did* clear
+  the bar.
+
 ## Sources
 
 - https://github.com/rtk-ai/rtk
