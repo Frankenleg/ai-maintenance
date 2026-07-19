@@ -12,6 +12,11 @@ Docs for maintaining Claude / Claude Code.
 - [Be Concise With Responses](be-concise-responses.md) — reduce output tokens
   with a measured conciseness instruction (thorough when correctness matters).
 
+## Tool evaluations
+
+- [Caveman](caveman-plugin-evaluation.md) — **evaluated, not adopted.** Real and
+  safe, but ~8–10% real savings (not the advertised 65%); a novelty.
+
 ---
 
 Images for these docs live in [`images/`](images/).
