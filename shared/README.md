@@ -13,7 +13,7 @@ Cross-cutting docs that apply to any AI agent, not just one.
 - [Scaffolding New Projects](scaffolding-new-projects.md) — cross-agent
   `new-project` / `new-git-project` Skills (source of truth:
   [`ai-skills`](https://github.com/Frankenleg/ai-skills); installed to both
-  `~/.claude/skills/` and `~/.agents/skills/`).
+  `~/.claude/skills/` and `~/.codex/skills/`).
 
 ---
 
