@@ -33,22 +33,23 @@ harmlessly.
 - **Deterministic git behavior.** The git split is deliberate. When git wasn't
   specified, the two agents diverged (Codex ran `git init`, Claude didn't). Now
   the choice is explicit: pick the skill for the behavior you want.
-- **`model: haiku`** — scaffolding is grunt work. Claude Code honors this field;
-  Codex ignores it (model is session-level there) — so the one shared file keeps
-  the optimization on the Claude side without breaking Codex.
 
 ## Install
 
 The skills install into **both** agents' skill directories — Claude Code reads
-`~/.claude/skills/<name>/`, Codex reads `~/.agents/skills/<name>/`. From a clone
-of `ai-skills`, `python scripts/install.py` copies each skill's runtime files
-(`SKILL.md` + `scaffold.py`, never the tests) into both, idempotently. See the
+`~/.claude/skills/<name>/`, Codex reads `~/.codex/skills/<name>/` (or
+`$CODEX_HOME/skills/` when set). From a clone of `ai-skills`,
+`python scripts/install.py` copies each skill's runtime files (everything except
+the tests) into both, idempotently. See the
 [ai-skills README](https://github.com/Frankenleg/ai-skills#install) for the
 manual-copy path and overrides.
 
 > `~` is your home directory on any OS — `/home/<you>` (Linux), `/Users/<you>`
-> (macOS), `C:\Users\<you>` (Windows). Note `~/.codex/skills/` is reserved for
-> Codex's system skills — don't author there.
+> (macOS), `C:\Users\<you>` (Windows). Note `~/.agents/skills/` is **not** a
+> Codex skills path — that's Codex's *plugin* location
+> (`~/.agents/plugins/marketplace.json`), a different concept. Within
+> `~/.codex/skills/`, only the `.system/` subdir is reserved (Codex's own
+> skills); author yours alongside it.
 
 ## Cross-platform
 
@@ -81,8 +82,6 @@ and falls back to tested defaults (name → directory basename) if omitted.
   the deterministic work).
 - [Keeping CLAUDE.md and AGENTS.md in Sync](syncing-claude-md-and-agents-md.md)
   — the pattern these skills set up (and its global-config variant).
-- [Leverage Subagents and Skills with Reduced Models](../agents/claude/reduced-models-for-subagents-and-skills.md)
-  — why `model: haiku` fits scaffolding.
 
 ## Sources
 
